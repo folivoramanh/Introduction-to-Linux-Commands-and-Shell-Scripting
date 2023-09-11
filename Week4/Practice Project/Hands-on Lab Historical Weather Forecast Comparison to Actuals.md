@@ -1,13 +1,13 @@
 # Exercise 1 - Initialize your weather report log file
 theia@theia-palasek182:/home/project$ touch rx_poc.log\
 theia@theia-palasek182:/home/project$ header= (echo -e "year\tmonth\tday\tobs_tmp\tfc_temp")\
-theia@theia-palasek182:/home/project$ echo $header>rx_poc.log\
-theia@theia-palasek182:/home/project$ cat rx_poc.log\
+theia@theia-palasek182:/home/project$ echo header>rx_poc.log\
+theia@theia-palasek182:/home/project$ cat rx_poc.log
 > year month day obs_tmp fc_temp
 
 # Exercise 2 - Download the raw weather data
 chmod u+x rx_poc.sh\
-theia@theia-palasek182:/home/project$ ./rx_poc.sh\
+theia@theia-palasek182:/home/project$ ./rx_poc.sh
 > % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\
                                  Dload  Upload   Total   Spent    Left  Speed\
 100  9159  100  9159    0     0   3498      0  0:00:02  0:00:02 --:--:--  3497
@@ -23,7 +23,7 @@ theia@theia-palasek182:/home/project$ crontab -e\
 crontab: installing new crontab\
 ![practice project](prac_prj.png)
 # Exercise 5 - Create a script to report historical forecasting accuracy
-theia@theia-palasek182:/home/project$ echo -e \"year\tmonth\tday\tobs_tmp\tfc_temp\taccuracy\taccuracy_range" > historical_fc_accuracy.tsv\
+theia@theia-palasek182:/home/project$ echo -e \"year\tmonth\tday\tobs_tmp\tfc_temp\taccuracy\taccuracy_range" > historical_fc_accuracy.tsv
 
 # Exercise 6 - Create a script to report weekly statistics of historical forecasting accuracy
 theia@theia-palasek182:/home/project$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-LX0117EN-Coursera/labs/synthetic_historical_fc_accuracy.tsv\
